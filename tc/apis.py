@@ -162,11 +162,20 @@ def unsupport_user(auth: TCUserAuth,
 
 
 def supporting_list(auth: TCAuth,
-                    user_id: str) \
+                    user_id: str,
+                    offset: int = 0,
+                    limit: int = 20) \
         -> TCRequest:
+    '''
+    offset: min:0
+    limit: min:1 max:20
+    '''
     return make_req(auth,
                     'GET',
-                    '/users/%s/supporting' % user_id)
+                    '/users/%s/supporting' % user_id,
+                    {'offset': offset,
+                     'limit': limit
+                     })
 
 
 def supporter_list(auth: TCAuth,

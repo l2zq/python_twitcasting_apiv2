@@ -83,7 +83,7 @@ def get_comments(auth: TCAuth,
                  movie_id: int,
                  offset: int = 0,
                  limit: int = 10,
-                 slice_id: int = 1) \
+                 slice_id: Optional[int] = None) \
         -> TCRequest:
     '''
     offset: min:0

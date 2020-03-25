@@ -36,3 +36,4 @@ def make_req(auth: Optional[TCAuth], method: str, path: str, args=None) -> TCReq
             args = urlencode(args)
             path = '%s?%s' % (path, args)
     return TCRequest(method, path, body, hdrs)
+

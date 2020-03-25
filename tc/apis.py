@@ -321,3 +321,4 @@ def ws_lives(auth: TCAuth) -> str:
     else:
         raise TypeError(
             'auth should be an instance of TCAppAuth or TCUserAuth')
+

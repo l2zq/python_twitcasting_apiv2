@@ -131,3 +131,4 @@ class TCErrorObj(TCObj):
         'message',
         'details'
     )
+

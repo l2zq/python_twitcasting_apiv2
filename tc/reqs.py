@@ -21,7 +21,7 @@ def make_req(auth: Optional[TCAuth], method: str, path: str, args=None) -> TCReq
     body = None
     hdrs = {
         'X-Api-Version': '2.0',
-        'Accept-Encoding': 'gzip'
+#       'Accept-Encoding': 'gzip'
     }
     if auth:
         if isinstance(auth, TCAuth):
